@@ -1,0 +1,19 @@
+:root{
+  /*--claro: #f9f8f6;
+  --acento-claro: #63b8e5;
+  --main: #2391e4;
+  --acento-oscuro: #6786af;
+  --oscuro: #14171c;*/
+
+  --claro: #efefef;
+  --acento-claro: #ffc947;
+  --main: #557ed3;
+  --acento-oscuro: #185adb;
+  --oscuro: #0a1931;
+}
+
+body {
+  margin: 0;
+}
+
+
