@@ -44,10 +44,10 @@ export const Contacto = () => {
           <div className="datos">
 
           <h5>TALLER</h5>
-            <p><BsGeoAlt/> Av. Avellaneda 45, CABA CP1405, Buenos Aires, Argentina</p>
-            <p><BsTelephone/> (011) 4981-2141</p>
-            <p><BsWhatsapp/> (+54) 11-5323-3702</p>
-            <p><BsMailbox/> jl_grana@hotmail.com</p>
+            <p><BsGeoAlt/> Direccion: Av. Avellaneda 45, CABA CP1405, Buenos Aires, Argentina</p>
+            <p><BsTelephone/> Telefono: (011) 4981-2141</p>
+            <p><BsWhatsapp/> WhatsApp: (+54) 11-5323-3702</p>
+            <p><BsMailbox/> e-mail: jl_grana@hotmail.com</p>
           </div>
         </Data>
       </Main>
