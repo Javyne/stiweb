@@ -15,10 +15,10 @@ export const Navigator = () => {
                 </div>
                 <LinksDiv >
                     <NavLinks pagina={ pagina } to='/'>Home</NavLinks>
-                    <NavLinks pagina={ pagina } to='/nosotros'>Nosotros</NavLinks>
                     <NavLinks pagina={ pagina } to='/servicios'>Servicios</NavLinks>
                     <NavLinks pagina={ pagina } to='/insumos'>Insumos</NavLinks>
                     <NavLinks pagina={ pagina } to='/contacto'>Contacto</NavLinks>
+                    <NavLinks pagina={ pagina } to='/faq'>F.A.Q</NavLinks>
                 </LinksDiv>
             </Nav>
         </>

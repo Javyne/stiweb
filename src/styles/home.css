@@ -1,39 +1,6 @@
-.home{
+.app-page{
     background: linear-gradient(rgb(20,23,28,0.75), rgb(20,23,28,0.75)), url('../../public/images/backHome.jpg');
     background-size: cover;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
 }
 
-.home-contain{
-    color: #f9f8f6;
-    height: 75%;
-}
 
-.carousel{
-    top:50%;
-}
-
-.home-pie{
-    height: 25%;
-    background: var(--claro);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.home-pie h4{
-    font-weight: 700;
-}
-
-.btn-primary{
-    background-color: var(--main) !important;
-}
-
-.btn-primary:hover{
-    background-color: var(--acento-claro) !important;
-}

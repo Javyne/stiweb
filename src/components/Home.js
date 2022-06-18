@@ -4,20 +4,21 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
+import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles/home.css';
+
 
 
 export const Home = () => {
 
   return (
-    <div className="home">
+    <MainPage>
 
-      <div className="home-contain">
+      <Contain>
         <Carrusel />
-      </div>
+      </Contain>
       
-      <div className="home-pie">
+      <Pie>
         <Form>
           <Row >
             <Form.Label ><h4>Solicitar Presupuesto</h4></Form.Label>
@@ -35,7 +36,49 @@ export const Home = () => {
             </Button>
           </Row>
         </Form>
-      </div>
-    </div>
+      </Pie>
+    </MainPage>
   )
-}
+};
+
+
+const MainPage = styled.div`
+  color: #f9f8f6;
+  height: 100%;
+`
+const Contain = styled.div`
+  height: 75%;
+  width: 100%;
+
+  .carousel{
+    top:50%;
+  }
+
+`
+const Pie = styled.div`
+  height: 25%;
+  background: var(--claro);
+
+  h4{
+    color: var(--oscuro);
+    font-weight: 700;
+  }
+
+  form{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  margin-left: 25%; 
+
+  .btn-primary{
+    background-color: var(--main) !important;
+    border:none !important;
+  }
+
+  .btn-primary:hover{
+    filter:brightness(110%) !important;
+  } 
+
+`
