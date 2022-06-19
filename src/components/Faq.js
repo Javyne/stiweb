@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import Accordion from 'react-bootstrap/Accordion';
+import { faqs } from '../data/faqs';
 
 export const Faq = () => {
   return (
@@ -14,7 +15,7 @@ export const Faq = () => {
             <li>
               <div>1</div>
               <h3>Diagnostico</h3>
-              <p>Realizamos el diagnostico y presupuesto SIN CARGO.</p>
+              <p>Realizamos el diagnostico y presupuesto SIN CARGO dentro de las 48 hs.</p>
             </li>
             <li>
               <div>2</div>
@@ -37,48 +38,17 @@ export const Faq = () => {
         <Preguntas>
           <div className="Divaccordion">
           <Accordion defaultActiveKey={['0']} alwaysOpen>
-            <Accordion.Item eventKey="0" >
-              <Accordion.Header>- ¿Cuánto tiempo tarda una reparación típica?</Accordion.Header>
+            {faqs.map((faq, index) => (
+            <Accordion.Item eventKey={index} >
+              <Accordion.Header>{faq.pregunta}</Accordion.Header>
               <Accordion.Body>
                 <p>
-                  Depende del tipo de reparación, y del tiempo para adquirir los repuestos necesarios, puede tardar entre 3 a 7 dias.
-                  <br/>
-                  En caso de que la reparación requira mas tiempo de lo acordado, siempre se da aviso al cliente.
-                </p>
-              </Accordion.Body>
+                  {faq.respuesta}
+               </p>
+               </Accordion.Body>
             </Accordion.Item>
-            <Accordion.Item eventKey="1">
-              <Accordion.Header>- ¿Dan alguna garantía sobre la reparación?</Accordion.Header>
-              <Accordion.Body>
-                <p>
-                  Ofrecemos una garantía de 90 dias sobre los repuestos y reparaciones que nosotros le hicimos al equipo.
-                </p>
-              </Accordion.Body>
-            </Accordion.Item>
-            <Accordion.Item eventKey="2">
-              <Accordion.Header>- ¿Se piede alguna información del dispostivo?</Accordion.Header>
-              <Accordion.Body>
-                <p>
-                  Depende del daño que el equipo haya sufrido es posible que esa información no se pierda. Siempre se le da aviso al cliente si es que se puede llegar a perder dicha información.
-                </p>
-              </Accordion.Body>
-            </Accordion.Item>
-            <Accordion.Item eventKey="3">
-              <Accordion.Header>- ¿Se necesita cita previa?</Accordion.Header>
-              <Accordion.Body>
-                <p>
-                Se puede acercar a nuestros locales sin cita previa.
-                </p>
-              </Accordion.Body>
-            </Accordion.Item>
-            <Accordion.Item eventKey="4">
-              <Accordion.Header>- ¿Qué marcas reparan?</Accordion.Header>
-              <Accordion.Body>
-                <p>
-                Reparamos todas las marcas y modelos, dependiendo de la disponibilidad de repuestos.
-                </p>
-              </Accordion.Body>
-            </Accordion.Item>
+            ))}
+
           </Accordion>
           </div>
           <img src='../../images/it-1.jpg'/>

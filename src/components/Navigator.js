@@ -42,7 +42,7 @@ const NavLinks = styled(Link)`
     color: ${link => NavLinkColor(link.to).color};
     font-family: 'Lato', sans-serif;
     font-weight: 700;
-    margin-left: 75px;
+    margin-left: 70px;
 
     &:hover{
         color: ${link => NavLinkColor(link.to).hover};

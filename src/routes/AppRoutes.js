@@ -14,6 +14,7 @@ export const AppRoutes = () => {
         <AppPage fondo = {appBackGround(pagina)}>
             <AppNav>
                 <Navigator />
+                <Linea/>
             </AppNav>
             <AppContain>
                 <Routes>  
@@ -34,13 +35,18 @@ const AppPage = styled.div`
     font-family: 'Lato', sans-serif;
     background: ${props => props.fondo};
     background-size: cover;
+    min-height: 100vh;
 `
 
 const AppNav = styled.div`
-    width: 100%;
-    height: 10%;
+
 `
 
 const AppContain = styled.div`
-    height: 90%;
+
+`
+const Linea = styled.hr`
+    width: 80%;
+    margin-left: 10%;
+    
 `

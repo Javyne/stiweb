@@ -7,13 +7,29 @@ import { dataCliente, dataReparaciones } from '../helpers';
 export const MisRep = () => {
 
     const [data, setData] = useState([]);
+    const [hidden, setHidden] = useState(true);
+
+    const resetState = (e) =>{
+      setData([]);
+      e.target[0].value = "";
+      e.target[1].value = "";
+    }
 
 
     const checkData = ( e ) => {
       e.preventDefault();
       let cliente = parseInt(e.target[0].value);
       let pass = e.target[1].value.toString();
-      dataCliente(cliente,pass)?setData(dataReparaciones(cliente)):alert("Datos incorrectos");     
+
+      if(dataCliente(cliente,pass)){
+        setData(dataReparaciones(cliente));
+        setHidden(true);     
+      }
+      else
+      {
+        resetState(e);
+        setHidden(false);  
+      }
     }
 
   return (
@@ -28,7 +44,7 @@ export const MisRep = () => {
             </Col>
             <Col sm={2} >
               <Form.Group controlId="pass">
-                <Form.Control type="pasword" placeholder="Contraseña"/>
+                <Form.Control type="password" autoComplete="off" placeholder="Contraseña"/>
               </Form.Group>
             </Col>
             <Col sm={2} >
@@ -37,6 +53,7 @@ export const MisRep = () => {
               </Boton>
             </Col>
           </Row>
+          <Span hidden={hidden}>Cliente o contraseña incorrectos</Span>
         </Form>
       </Container>
       <div className="tabla">
@@ -50,7 +67,6 @@ export const MisRep = () => {
 
 const Main = styled.div`
   margin-top: 50px;
-  height: 85vh;
 
   .tabla{
     margin-top: 50px;
@@ -64,4 +80,7 @@ const Boton = styled(Button)`
     filter: brightness(110%);
   }
 
+`
+const Span = styled.span`
+  color: var(--danger);
 `

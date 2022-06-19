@@ -43,28 +43,23 @@ export const Home = () => {
 
 const MainPage = styled.div`
   color: #f9f8f6;
-  height: 90vh;
 `
 const Contain = styled.div`
-  height: 75%;
-  width: 100%;
+  height: 70vh;
 
-  .carousel{
-    top:50%;
+  .carousel {
+    top: 50%;
   }
 
 `
 const Pie = styled.div`
 
-  padding-top: 20px;
-  whidth: 50%;
-  height: 25%;
   background: var(--oscuro90);
-
+  boottom: 0px;
   display: flex;
-  justify-content: space-around;
   font-size: 15px;
-
+  justify-content: space-around;
+  padding-top: 20px;
 
   ul{
     list-style: none;
@@ -75,6 +70,5 @@ const Pie = styled.div`
     color: (--acento-oscuro);
   }
 
-  
 
 `

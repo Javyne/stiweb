@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import {Button, Form} from 'react-bootstrap';
 import { BsGeoAlt, BsTelephone, BsWhatsapp, BsMailbox } from 'react-icons/bs';
+import { Mapa } from './Mapa';
 
 
 export const Contacto = () => {
@@ -33,7 +34,7 @@ export const Contacto = () => {
         </Formulario>
         <Data>
           <div className="mapa">
-              ///COLOCAR MAPA///
+              <Mapa isMarkerShown/>
           </div>
           <div className="datos">
             <h5>Av. Avellaneda</h5>
@@ -55,15 +56,13 @@ export const Contacto = () => {
 }
 
 const Main = styled.div`
-  height: 90vh;
+
   width: 100%;
   display: flex;
 `
 const Formulario = styled.div`
-  height: 100%;
   width: 50%;
   border-right: 1px solid #ccc;
-
 
   form{
     width: 60%;
@@ -72,25 +71,20 @@ const Formulario = styled.div`
 
     p{
       color: grey;
-
-
     }
   }
 `
 const Data = styled.div`
-  height: 100%;
   width: 50%;
-  
 
   .mapa{
-    height: 50%;
-    width: 100%;
+    width: 90%;
+    margin-left: 5%;
     text-align: center;
     color:red;
   }
 
   .datos{
-    height: 25%;
     width: 80%;
     margin-left: 10%;
 
