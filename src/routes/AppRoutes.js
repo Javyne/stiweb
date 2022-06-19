@@ -1,14 +1,9 @@
 import React from 'react'
-import { Home } from '../components/Home';
-import { Navigator } from '../components/Navigator';
-import { Faq } from '../components/Faq';
-import { Servicios } from '../components/Servicios';
-import { Insumos } from '../components/Insumos';
-import { Contacto } from '../components/Contacto';
-import {Routes, Route, useLocation} from 'react-router-dom';
 import styled from 'styled-components';
+import { Home, Navigator, Faq, Servicios, Contacto, MisRep} from '../components';
+import {Routes, Route, useLocation} from 'react-router-dom';
 import {appBackGround} from '../helpers/appBackGround';
-import '../styles/app.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const AppRoutes = () => {
 
@@ -23,7 +18,7 @@ export const AppRoutes = () => {
             <AppContain>
                 <Routes>  
                     <Route exact path="/servicios" element={<Servicios />}/>
-                    <Route exact path="/insumos" element={<Insumos />}/> 
+                    <Route exact path="/misrep" element={<MisRep />}/> 
                     <Route exact path="/contacto" element={<Contacto />}/>
                     <Route exact path="/faq" element={<Faq />}/>
                     <Route path="/*" element={<Home />} /> 
@@ -36,7 +31,6 @@ export const AppRoutes = () => {
 
 
 const AppPage = styled.div`
-    height: 100vh;
     font-family: 'Lato', sans-serif;
     background: ${props => props.fondo};
     background-size: cover;

@@ -1,11 +1,6 @@
 import React from 'react'
-import { Carrusel } from './Carrusel';
-import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
 import styled from 'styled-components';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Carrusel } from '../components';
 
 
 
@@ -13,29 +8,33 @@ export const Home = () => {
 
   return (
     <MainPage>
-
       <Contain>
         <Carrusel />
       </Contain>
-      
       <Pie>
-        <Form>
-          <Row >
-            <Form.Label ><h4>Solicitar Presupuesto</h4></Form.Label>
-            <Form.Group as={Col} controlId="nombreID">
-              <Form.Control type="text" placeholder="Nombre" />
-            </Form.Group>
-            <Form.Group as={Col} controlId="telefonoID">
-              <Form.Control type="" placeholder="Telefono" />
-            </Form.Group>
-            <Form.Group as={Col} controlId="mailID">
-              <Form.Control placeholder="e-mail" />
-            </Form.Group>
-            <Button as={Col} variant="primary" type="submit">
-              Enviar
-            </Button>
-          </Row>
-        </Form>
+        <div>
+          <p>Sucursal Av. Avellaneda</p>
+          <ul>
+            <li>Direccion: Av. Avellaneda 45, CABA C1405CNA, Buenos Aires, Argentina</li>
+            <li>Telefono: (011) 4981-2141</li>
+            <li>WhatsApp: (+54) 11-5323-3702</li>
+            <li>e-mail: jl_grana@hotmail.com</li>
+          </ul>
+        </div>
+        <div>
+          <p>Sucursal Gurruchaga</p>
+          <ul>
+            <li>Direccion: Calle Gurruchaga 558, CABA C1414DHK, Buenos Aires, Argentina</li>
+            <li>Telefono: (011) 4856-9427</li>
+            <li>WhatsApp: (+54) 11-5323-3702</li>
+          </ul>
+        </div>
+        <div>
+          <ul className="designed">
+            <li>Designed by: Javier Russo</li>
+            <li>&copy; 2022</li>
+          </ul>
+        </div>
       </Pie>
     </MainPage>
   )
@@ -44,7 +43,7 @@ export const Home = () => {
 
 const MainPage = styled.div`
   color: #f9f8f6;
-  height: 100%;
+  height: 90vh;
 `
 const Contain = styled.div`
   height: 75%;
@@ -56,29 +55,26 @@ const Contain = styled.div`
 
 `
 const Pie = styled.div`
+
+  padding-top: 20px;
+  whidth: 50%;
   height: 25%;
-  background: var(--claro);
+  background: var(--oscuro90);
 
-  h4{
-    color: var(--oscuro);
-    font-weight: 700;
-  }
-
-  form{
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 100%;
-  width: 50%;
-  margin-left: 25%; 
+  justify-content: space-around;
+  font-size: 15px;
 
-  .btn-primary{
-    background-color: var(--main) !important;
-    border:none !important;
+
+  ul{
+    list-style: none;
   }
 
-  .btn-primary:hover{
-    filter:brightness(110%) !important;
-  } 
+  p{
+    font-weight: 900;
+    color: (--acento-oscuro);
+  }
+
+  
 
 `

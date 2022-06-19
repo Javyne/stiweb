@@ -7,7 +7,7 @@ export const Carrusel = () => {
             <Carousel fade indicators={false}>
                 <Carousel.Item interval={3000} className="text-center">
 
-                    <h1>Reparacion de TV/LCD</h1>
+                    <h1>Especialistas en reparacion de TV/LCD</h1>
                     <h4>Reparamos una amplia gama de modelos de TV/LCD/LED</h4>
 
                 </Carousel.Item>

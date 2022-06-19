@@ -1,6 +1,6 @@
 import {React} from 'react'
-import {Link, useLocation} from 'react-router-dom';
 import styled from 'styled-components';
+import {Link, useLocation} from 'react-router-dom';
 
 
 export const Navigator = () => {
@@ -11,14 +11,14 @@ export const Navigator = () => {
         <>
             <Nav>
                 <div>
-                    <Img src='../../images/STINEGRO3.png'/>
+                    <Img src={NavLinkLogo(pagina)}/>
                 </div>
                 <LinksDiv >
                     <NavLinks pagina={ pagina } to='/'>Home</NavLinks>
                     <NavLinks pagina={ pagina } to='/servicios'>Servicios</NavLinks>
-                    <NavLinks pagina={ pagina } to='/insumos'>Insumos</NavLinks>
                     <NavLinks pagina={ pagina } to='/contacto'>Contacto</NavLinks>
                     <NavLinks pagina={ pagina } to='/faq'>F.A.Q</NavLinks>
+                    <NavLinks pagina={ pagina } to='/misrep'>Mis Reparaciones</NavLinks>
                 </LinksDiv>
             </Nav>
         </>
@@ -67,7 +67,15 @@ const NavLinkColor = (linkName) =>{
     {
         return ({color:'var(--oscuro)',hover:'var(--main)'});
     }
+}
 
-
-
+const NavLinkLogo = (linkName) =>{
+    
+    if(linkName === '/'){
+        return ('../../images/STIBlanco.png');
+    }
+    else
+    {
+        return ('../../images/STINegro.png');
+    }
 }

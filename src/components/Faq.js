@@ -13,7 +13,7 @@ export const Faq = () => {
           <ul>
             <li>
               <div>1</div>
-              <h3>Presupuesto</h3>
+              <h3>Diagnostico</h3>
               <p>Realizamos el diagnostico y presupuesto SIN CARGO.</p>
             </li>
             <li>
@@ -29,7 +29,7 @@ export const Faq = () => {
             <li>
               <div>4</div>
               <h3>Devolución</h3>
-              <p>Devolvemos el equipo, reparado y funcional, con GARANTIA DE 6 MESES.</p>
+              <p>Devolvemos el equipo, reparado y funcional, con GARANTIA DE 90 DIAS.</p>
             </li>
           </ul>
         </ComoTrabajamos>
@@ -41,8 +41,9 @@ export const Faq = () => {
               <Accordion.Header>- ¿Cuánto tiempo tarda una reparación típica?</Accordion.Header>
               <Accordion.Body>
                 <p>
-                  Depende del tipo de reparación, y del tiempo para adquirir los repuestos necesarios, puede tardar entre 1 semana hasta 30 dias.
-                  De todas formas siempre se da aviso al cliente.
+                  Depende del tipo de reparación, y del tiempo para adquirir los repuestos necesarios, puede tardar entre 3 a 7 dias.
+                  <br/>
+                  En caso de que la reparación requira mas tiempo de lo acordado, siempre se da aviso al cliente.
                 </p>
               </Accordion.Body>
             </Accordion.Item>
@@ -50,7 +51,7 @@ export const Faq = () => {
               <Accordion.Header>- ¿Dan alguna garantía sobre la reparación?</Accordion.Header>
               <Accordion.Body>
                 <p>
-                  Ofrecemos una garantía de 6 meses sobre los repuestos y reparaciones que nosotros le hicimos al equipo.
+                  Ofrecemos una garantía de 90 dias sobre los repuestos y reparaciones que nosotros le hicimos al equipo.
                 </p>
               </Accordion.Body>
             </Accordion.Item>
@@ -65,12 +66,17 @@ export const Faq = () => {
             <Accordion.Item eventKey="3">
               <Accordion.Header>- ¿Se necesita cita previa?</Accordion.Header>
               <Accordion.Body>
+                <p>
                 Se puede acercar a nuestros locales sin cita previa.
+                </p>
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="4">
-              <Accordion.Header>- ///Ver alguna pregunta tipica mas</Accordion.Header>
+              <Accordion.Header>- ¿Qué marcas reparan?</Accordion.Header>
               <Accordion.Body>
+                <p>
+                Reparamos todas las marcas y modelos, dependiendo de la disponibilidad de repuestos.
+                </p>
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
@@ -78,8 +84,6 @@ export const Faq = () => {
           <img src='../../images/it-1.jpg'/>
         </Preguntas>
       </Main>
-
-
     </>
   )
 }
@@ -115,7 +119,7 @@ const ComoTrabajamos = styled.div`
     flex-direction: row wrap;
     justify-content: space-around;
     list-style: none;
-    border-top: 2px solid var(--main);
+    border-top: 2px solid var(--acento-claro);
     margin-top: 5%;
     width: 80%;
     margin-left: 10%;
@@ -124,7 +128,7 @@ const ComoTrabajamos = styled.div`
       width: 20%;
 
       div{
-        border: 2px solid var(--main);
+        border: 2px solid var(--acento-claro);
         border-radius: 50%;
         position: relative;
         top: -22px;
@@ -149,14 +153,15 @@ const ComoTrabajamos = styled.div`
 const PFTit = styled.h2`
   margin-left: 5%;
   font-weight: 900;
+  margin-top: 5%;
 `
 
 const Preguntas = styled.div`
   display: flex;
-  margin-left: 5%;
-  margin-top: 5%;
   align-items: center;
   justify-content: space-around;
+  background-color: var(--oscuro);
+
 
   .Divaccordion{
     width: 40%;

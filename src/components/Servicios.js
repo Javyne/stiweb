@@ -5,7 +5,7 @@ import { FaCheckCircle } from 'react-icons/fa';
 export const Servicios = () => {
   return (
     <>
-      <Pagina>
+      <Main>
         <CajaTexto>
           <h3>Reparaciones</h3>
           <hr/>
@@ -29,27 +29,27 @@ export const Servicios = () => {
             </ul>
         </CajaTexto>
         <CajaTexto>
-          <h3>Reparación de computadoras</h3>
+          <h3>Control Remoto</h3>
           <hr/>
-          <h5>Reparamos todo tipo de defectos y fallas.</h5>
+          <h5>Reparación y venta de Control Remoto.</h5>
             <ul>
-              <li><FaCheckCircle/> Computadoras personales.</li>
-              <li><FaCheckCircle/> Laptops.</li>
-              <li><FaCheckCircle/> Servicio de diagnosticos.</li>
+              <li><FaCheckCircle/> Orginiles y Genericos.</li>
+              <li><FaCheckCircle/> Amplia gama de dispositivos.</li>
+              <li><FaCheckCircle/> Control remoto para portones automatizados.</li>
             </ul>
         </CajaTexto>
         <Imagen src='../../images/it-5.jpg'/>
 
 
-      </Pagina>
+      </Main>
 
     </>
   )
 }
 
-const Pagina = styled.div`
-  width: 70%;
-  margin-left: 25%;
+const Main = styled.div`
+  width: 90%;
+  margin-left: 15%;
   display: flex;
   flex-wrap: wrap;
 `
